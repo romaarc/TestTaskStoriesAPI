@@ -10,7 +10,6 @@ import UIKit
 final class AppCoordinator {
     
     private let window: UIWindow
-    private lazy var tabBarController = UITabBarController()
     private lazy var navigationControllers = AppCoordinator.makeNavigationControllers()
     private let appDependency: AppDependency
     
