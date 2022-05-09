@@ -10,6 +10,7 @@ final class StoriesPresenter: StoriesPresenterProtocol {
     func presentStoriesResult(response: Stories.StoriesLoad.Response) {
         switch response.result {
         case .success(let result):
+            let coverURL = "https://stepik.org"
             var dictStoryPartViewModels: [Int: [StoryPartViewModel]] = [:]
             var storyPartViewModels: [StoryPartViewModel] = []
             var viewModels: [StoriesViewModel] = []
@@ -31,7 +32,7 @@ final class StoriesPresenter: StoriesPresenterProtocol {
             viewModels = result.map { story in
                 StoriesViewModel(id: story.id,
                                  title: story.title,
-                                 cover: story.cover,
+                                 cover: coverURL + story.cover,
                                  parts: dictStoryPartViewModels[story.id],
                                  isPublished: story.isPublished,
                                  position: story.position,

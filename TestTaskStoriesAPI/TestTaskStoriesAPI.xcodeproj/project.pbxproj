@@ -40,6 +40,12 @@
 		BB6A2221282706A600964ACE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6A2220282706A600964ACE /* PromiseKit */; };
 		BB6A22262827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */; };
 		BB766BDA2829228200AB656E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BD92829228200AB656E /* Parser.swift */; };
+		BB766BDD282947C300AB656E /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BDC282947C300AB656E /* StoriesCollectionViewCell.swift */; };
+		BB766BE02829522900AB656E /* StoriesViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BDF2829522900AB656E /* StoriesViewProtocol.swift */; };
+		BB766BE228297A0E00AB656E /* StoriesCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BE128297A0E00AB656E /* StoriesCollectionViewAdapter.swift */; };
+		BB766BE52829A8D800AB656E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BB766BE42829A8D800AB656E /* Kingfisher */; };
+		BB766BE72829A8FE00AB656E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BE62829A8FE00AB656E /* UIImageView+Extension.swift */; };
+		BB766BE92829A92A00AB656E /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BE82829A92A00AB656E /* Cacher.swift */; };
 		BBB44FE52826F7D600645436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44FE42826F7D600645436 /* AppDelegate.swift */; };
 		BBB44FE72826F7D600645436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44FE62826F7D600645436 /* SceneDelegate.swift */; };
 		BBB44FEE2826F7D700645436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB44FED2826F7D700645436 /* Assets.xcassets */; };
@@ -84,6 +90,11 @@
 		BB33C4802827351A00ED865E /* Result+Stepik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Stepik.swift"; sourceTree = "<group>"; };
 		BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyInitializableViewProtocol.swift; sourceTree = "<group>"; };
 		BB766BD92829228200AB656E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		BB766BDC282947C300AB656E /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB766BDF2829522900AB656E /* StoriesViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewProtocol.swift; sourceTree = "<group>"; };
+		BB766BE128297A0E00AB656E /* StoriesCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		BB766BE62829A8FE00AB656E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		BB766BE82829A92A00AB656E /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		BBB44FE12826F7D600645436 /* TestTaskStoriesAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskStoriesAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB44FE42826F7D600645436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB44FE62826F7D600645436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB766BE52829A8D800AB656E /* Kingfisher in Frameworks */,
 				BB6A221E2827062700964ACE /* SnapKit in Frameworks */,
 				BB6A2221282706A600964ACE /* PromiseKit in Frameworks */,
 			);
@@ -119,6 +131,8 @@
 		A310DBD005228101A4E96BFE /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				BB766BDE282951FB00AB656E /* Views */,
+				BB766BDB282947B000AB656E /* Cell */,
 				BB17E1C82827E70B000CDC5E /* ViewModel */,
 				3778558E73FF34AF2D7A180D /* InputOutput */,
 				2B5F2565DA6C8B83E02753FB /* StoriesAssembly.swift */,
@@ -127,7 +141,6 @@
 				F14429444A4F39F95537EC85 /* StoriesPresenter.swift */,
 				A3DAE4B7CAF654BBCF68789C /* StoriesDataFlow.swift */,
 				72EABE341A32C1A89CF37435 /* StoriesProvider.swift */,
-				E71A717D483D630163023B5A /* StoriesView.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -239,6 +252,7 @@
 				BB33C466282723B600ED865E /* Font.swift */,
 				BB33C468282723DD00ED865E /* ReuseIdentifier.swift */,
 				BB33C46D2827245000ED865E /* UIColor+Extension.swift */,
+				BB766BE62829A8FE00AB656E /* UIImageView+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -267,6 +281,7 @@
 			children = (
 				BB33C4802827351A00ED865E /* Result+Stepik.swift */,
 				BB766BD92829228200AB656E /* Parser.swift */,
+				BB766BE82829A92A00AB656E /* Cacher.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -287,6 +302,24 @@
 				BB33C471282728C300ED865E /* CachedValue.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BB766BDB282947B000AB656E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB766BDC282947C300AB656E /* StoriesCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BB766BDE282951FB00AB656E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E71A717D483D630163023B5A /* StoriesView.swift */,
+				BB766BDF2829522900AB656E /* StoriesViewProtocol.swift */,
+				BB766BE128297A0E00AB656E /* StoriesCollectionViewAdapter.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BBB44FD82826F7D600645436 = {
@@ -349,6 +382,7 @@
 			packageProductDependencies = (
 				BB6A221D2827062700964ACE /* SnapKit */,
 				BB6A2220282706A600964ACE /* PromiseKit */,
+				BB766BE42829A8D800AB656E /* Kingfisher */,
 			);
 			productName = TestTaskStoriesAPI;
 			productReference = BBB44FE12826F7D600645436 /* TestTaskStoriesAPI.app */;
@@ -381,6 +415,7 @@
 			packageReferences = (
 				BB6A221C2827062700964ACE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BB6A221F282706A600964ACE /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				BB766BE32829A8D800AB656E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = BBB44FE22826F7D600645436 /* Products */;
 			projectDirPath = "";
@@ -412,17 +447,21 @@
 			files = (
 				BB6A22262827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift in Sources */,
 				BB17E1C72827E186000CDC5E /* Typealias.swift in Sources */,
+				BB766BE02829522900AB656E /* StoriesViewProtocol.swift in Sources */,
 				BB33C46E2827245000ED865E /* UIColor+Extension.swift in Sources */,
 				BB33C46C2827241B00ED865E /* Colors.swift in Sources */,
 				BBB44FE52826F7D600645436 /* AppDelegate.swift in Sources */,
 				BBB44FE72826F7D600645436 /* SceneDelegate.swift in Sources */,
 				BB17E1C22827CD97000CDC5E /* NetworkService+Strory.swift in Sources */,
+				BB766BE228297A0E00AB656E /* StoriesCollectionViewAdapter.swift in Sources */,
 				BB17E1BC2827CA0A000CDC5E /* API.swift in Sources */,
 				BB33C47E28272F1000ED865E /* PartTypeButton.swift in Sources */,
 				96A0569AF6E82CC797194AC9 /* StoriesAssembly.swift in Sources */,
 				C77D92D2C062732B6F4593E7 /* StoriesViewController.swift in Sources */,
+				BB766BE92829A92A00AB656E /* Cacher.swift in Sources */,
 				BB33C45F2827230300ED865E /* AppDependency.swift in Sources */,
 				BB33C47628272A8A00ED865E /* StoryPart.swift in Sources */,
+				BB766BE72829A8FE00AB656E /* UIImageView+Extension.swift in Sources */,
 				BB33C45D282722E000ED865E /* AppCoordinator.swift in Sources */,
 				BB33C4812827351A00ED865E /* Result+Stepik.swift in Sources */,
 				BB17E1C02827CD26000CDC5E /* NetworkServiceProtocol.swift in Sources */,
@@ -440,6 +479,7 @@
 				BB766BDA2829228200AB656E /* Parser.swift in Sources */,
 				0E2558B4E887F1E731AD8B6C /* StoriesView.swift in Sources */,
 				7C6C41BA50BB8AEC7C8E4093 /* StoriesInputProtocol.swift in Sources */,
+				BB766BDD282947C300AB656E /* StoriesCollectionViewCell.swift in Sources */,
 				E1BCD66FCDF99E899E7695E1 /* StoriesOutputProtocol.swift in Sources */,
 				BB33C4742827292400ED865E /* Story.swift in Sources */,
 				BB17E1BE2827CAA9000CDC5E /* NetworkService.swift in Sources */,
@@ -674,6 +714,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		BB766BE32829A8D800AB656E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -686,6 +734,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB6A221F282706A600964ACE /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		BB766BE42829A8D800AB656E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB766BE32829A8D800AB656E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

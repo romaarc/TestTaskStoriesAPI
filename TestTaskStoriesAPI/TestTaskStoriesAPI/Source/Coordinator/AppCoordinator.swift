@@ -23,6 +23,8 @@ final class AppCoordinator {
     }
     
     func start() {
+        UIImageView().setupCache()
+        
         if #available(iOS 13.0, *) {
             window.overrideUserInterfaceStyle = .light
         }
@@ -63,12 +65,12 @@ private extension AppCoordinator {
     
     func setupAppearanceNavigationBar(with controller: UINavigationController) {
         let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = Colors.lightGray
+        navigationBarAppearance.backgroundColor = UIColor(hex6: 0x121212)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.01
-        navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black,
+        navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white,
                                                        .font : Font.sber(ofSize: Font.Size.twenty, weight: .bold)]
-        navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black,
+        navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white,
                                                             .font : Font.sber(ofSize: Font.Size.thirdyFour, weight: .bold),
                                                             .paragraphStyle: paragraphStyle,
                                                             .kern: 0.41]
@@ -76,6 +78,7 @@ private extension AppCoordinator {
         controller.navigationBar.standardAppearance = navigationBarAppearance
         controller.navigationBar.compactAppearance = navigationBarAppearance
         controller.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        controller.navigationBar.isTranslucent = false
         controller.navigationBar.setBackgroundImage(UIImage(), for: .default)
         controller.navigationBar.shadowImage = UIImage()
     }

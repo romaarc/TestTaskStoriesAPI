@@ -6,6 +6,10 @@ protocol StoriesViewControllerProtocol: AnyObject {
 
 final class StoriesViewController: UIViewController {
     private let interactor: StoriesInteractorProtocol
+    
+    var storiesView: StoriesView? { self.view as? StoriesView }
+
+    private var collectionViewAdapter = StoriesCollectionViewAdapter()
 
     init(interactor: StoriesInteractorProtocol) {
         self.interactor = interactor
@@ -24,10 +28,25 @@ final class StoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionViewAdapter.delegate = self
         interactor.doStoriesLoad(request: .init())
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
     }
 }
 
 extension StoriesViewController: StoriesViewControllerProtocol {
-    func displayStories(viewModel: Stories.StoriesLoad.ViewModel) {}
+    func displayStories(viewModel: Stories.StoriesLoad.ViewModel) {
+        collectionViewAdapter.components = viewModel.model
+        storiesView?.updateCollectionViewData(
+            delegate: collectionViewAdapter,
+            dataSource: collectionViewAdapter
+        )
+    }
+}
+
+extension StoriesViewController: StoriesCollectionViewAdapterDelegate {
+    func storiesCollectionViewAdapter(_ adapter: StoriesCollectionViewAdapter, didSelectComponentAt indexPath: IndexPath) {}
 }
