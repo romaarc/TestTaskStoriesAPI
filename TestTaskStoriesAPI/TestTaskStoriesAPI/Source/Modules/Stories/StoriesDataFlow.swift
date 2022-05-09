@@ -9,7 +9,7 @@ enum Stories {
         }
 
         struct ViewModel {
-            let model: StoriesViewModel
+            let model: [StoriesViewModel]
         }
     }
 }

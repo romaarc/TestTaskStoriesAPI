@@ -39,6 +39,7 @@
 		BB6A221E2827062700964ACE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6A221D2827062700964ACE /* SnapKit */; };
 		BB6A2221282706A600964ACE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6A2220282706A600964ACE /* PromiseKit */; };
 		BB6A22262827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */; };
+		BB766BDA2829228200AB656E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB766BD92829228200AB656E /* Parser.swift */; };
 		BBB44FE52826F7D600645436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44FE42826F7D600645436 /* AppDelegate.swift */; };
 		BBB44FE72826F7D600645436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44FE62826F7D600645436 /* SceneDelegate.swift */; };
 		BBB44FEE2826F7D700645436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB44FED2826F7D700645436 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		BB33C47D28272F1000ED865E /* PartTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTypeButton.swift; sourceTree = "<group>"; };
 		BB33C4802827351A00ED865E /* Result+Stepik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Stepik.swift"; sourceTree = "<group>"; };
 		BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyInitializableViewProtocol.swift; sourceTree = "<group>"; };
+		BB766BD92829228200AB656E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		BBB44FE12826F7D600645436 /* TestTaskStoriesAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskStoriesAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB44FE42826F7D600645436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB44FE62826F7D600645436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BB33C4802827351A00ED865E /* Result+Stepik.swift */,
+				BB766BD92829228200AB656E /* Parser.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				BB17E1CA2827E71B000CDC5E /* StoriesViewModel.swift in Sources */,
 				BB33C467282723B600ED865E /* Font.swift in Sources */,
 				BB17E1CC2827F308000CDC5E /* Meta.swift in Sources */,
+				BB766BDA2829228200AB656E /* Parser.swift in Sources */,
 				0E2558B4E887F1E731AD8B6C /* StoriesView.swift in Sources */,
 				7C6C41BA50BB8AEC7C8E4093 /* StoriesInputProtocol.swift in Sources */,
 				E1BCD66FCDF99E899E7695E1 /* StoriesOutputProtocol.swift in Sources */,
