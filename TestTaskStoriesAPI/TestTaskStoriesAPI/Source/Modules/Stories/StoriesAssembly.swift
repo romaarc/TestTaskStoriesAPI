@@ -1,9 +1,5 @@
 import UIKit
 
-protocol Assembly {
-    func makeModule(with context: StoriesContext) -> UIViewController
-}
-
 final class StoriesAssembly: Assembly {
     var moduleInput: StoriesInputProtocol?
 
@@ -13,7 +9,8 @@ final class StoriesAssembly: Assembly {
         self.moduleOutput = output
     }
 
-    func makeModule(with context: StoriesContext) -> UIViewController {
+    func makeModule(with context: ModuleContext?) -> UIViewController {
+        guard let context = context else { return UIViewController() }
         let provider = StoriesProvider(stepikNetworkService: context.moduleDependencies.stepikNetworkService)
         let presenter = StoriesPresenter()
         let interactor = StoriesInteractor(presenter: presenter, provider: provider)
@@ -22,12 +19,7 @@ final class StoriesAssembly: Assembly {
         presenter.viewController = viewController
         self.moduleInput = interactor
         interactor.moduleOutput = self.moduleOutput
-
         
         return viewController
     }
-}
-
-struct StoriesContext {
-    let moduleDependencies: ModuleDependencies
 }

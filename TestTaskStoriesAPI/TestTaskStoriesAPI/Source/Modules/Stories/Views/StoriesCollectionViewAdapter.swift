@@ -11,13 +11,12 @@ import UIKit
 protocol StoriesCollectionViewAdapterDelegate: AnyObject {
     func storiesCollectionViewAdapter(
         _ adapter: StoriesCollectionViewAdapter,
+        currentItemFrame: CGRect?,
         didSelectComponentAt indexPath: IndexPath
     )
 }
     
-
 final class StoriesCollectionViewAdapter: NSObject {
-    
     weak var delegate: StoriesCollectionViewAdapterDelegate?
     
     var components: [StoriesViewModel]
@@ -26,14 +25,13 @@ final class StoriesCollectionViewAdapter: NSObject {
         self.components = components
         super.init()
     }
-    
 }
 
 // MARK: - StoriesCollectionViewAdapter: UICollectionViewDataSource -
 
 extension StoriesCollectionViewAdapter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.components.count
+        components.count
     }
 
     func collectionView(
@@ -47,15 +45,20 @@ extension StoriesCollectionViewAdapter: UICollectionViewDataSource {
         }
     }
 
-
 // MARK: - StoriesCollectionViewAdapter: UICollectionViewDelegateFlowLayout -
 
 extension StoriesCollectionViewAdapter: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let generator = UISelectionFeedbackGenerator()
-//        let viewModel = viewModels[indexPath.row]
-//        generator.selectionChanged()
-//        output.onCellTap(with: viewModel)
-        //self.delegate?.StoriesCollectionViewAdapterDelegate(self, didSelectComponentAt: indexPath)
+        let generator = UISelectionFeedbackGenerator()
+        var currentItemFrame: CGRect? = nil
+        if let frame = collectionView.cellForItem(at: indexPath)?.frame {
+            currentItemFrame = collectionView.convert(frame, to: UIApplication.shared.keyWindow)
+        }
+        generator.prepare()
+        generator.selectionChanged()
+        self.delegate?.storiesCollectionViewAdapter(
+            self,
+            currentItemFrame: currentItemFrame,
+            didSelectComponentAt: indexPath)
     }
 }

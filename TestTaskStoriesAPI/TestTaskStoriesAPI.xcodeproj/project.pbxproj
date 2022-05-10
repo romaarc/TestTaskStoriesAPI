@@ -20,6 +20,16 @@
 		BB17E1C72827E186000CDC5E /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17E1C62827E186000CDC5E /* Typealias.swift */; };
 		BB17E1CA2827E71B000CDC5E /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17E1C92827E71B000CDC5E /* StoriesViewModel.swift */; };
 		BB17E1CC2827F308000CDC5E /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17E1CB2827F308000CDC5E /* Meta.swift */; };
+		BB23D6A6282A64FF0012FFAD /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6A5282A64FF0012FFAD /* UIApplication+Extension.swift */; };
+		BB23D6AB282A689A0012FFAD /* GrowPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6AA282A689A0012FFAD /* GrowPresentAnimationController.swift */; };
+		BB23D6AD282A68D80012FFAD /* ShrinkDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6AC282A68D80012FFAD /* ShrinkDismissAnimationController.swift */; };
+		BB23D6AF282A691B0012FFAD /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6AE282A691B0012FFAD /* SwipeInteractionController.swift */; };
+		BB23D6B2282A71280012FFAD /* OpenedStoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6B1282A71280012FFAD /* OpenedStoriesAssembly.swift */; };
+		BB23D6B4282A719F0012FFAD /* StoryOpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6B3282A719F0012FFAD /* StoryOpenSource.swift */; };
+		BB23D6B8282A72A80012FFAD /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6B7282A72A80012FFAD /* Assembly.swift */; };
+		BB23D6BA282A74180012FFAD /* OpenedStoriesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6B9282A74180012FFAD /* OpenedStoriesPageViewController.swift */; };
+		BB23D6BC282A743F0012FFAD /* OpenedStoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6BB282A743F0012FFAD /* OpenedStoriesPresenter.swift */; };
+		BB23D6BE282A75390012FFAD /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23D6BD282A75390012FFAD /* NSNotification+Extension.swift */; };
 		BB33C45D282722E000ED865E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33C45C282722E000ED865E /* AppCoordinator.swift */; };
 		BB33C45F2827230300ED865E /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33C45E2827230300ED865E /* AppDependency.swift */; };
 		BB33C4632827236E00ED865E /* SBSansUI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB33C4612827235E00ED865E /* SBSansUI-Regular.ttf */; };
@@ -72,6 +82,16 @@
 		BB17E1C62827E186000CDC5E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		BB17E1C92827E71B000CDC5E /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		BB17E1CB2827F308000CDC5E /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		BB23D6A5282A64FF0012FFAD /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		BB23D6AA282A689A0012FFAD /* GrowPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowPresentAnimationController.swift; sourceTree = "<group>"; };
+		BB23D6AC282A68D80012FFAD /* ShrinkDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkDismissAnimationController.swift; sourceTree = "<group>"; };
+		BB23D6AE282A691B0012FFAD /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
+		BB23D6B1282A71280012FFAD /* OpenedStoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedStoriesAssembly.swift; sourceTree = "<group>"; };
+		BB23D6B3282A719F0012FFAD /* StoryOpenSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOpenSource.swift; sourceTree = "<group>"; };
+		BB23D6B7282A72A80012FFAD /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		BB23D6B9282A74180012FFAD /* OpenedStoriesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedStoriesPageViewController.swift; sourceTree = "<group>"; };
+		BB23D6BB282A743F0012FFAD /* OpenedStoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedStoriesPresenter.swift; sourceTree = "<group>"; };
+		BB23D6BD282A75390012FFAD /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
 		BB33C45C282722E000ED865E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BB33C45E2827230300ED865E /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		BB33C4612827235E00ED865E /* SBSansUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SBSansUI-Regular.ttf"; sourceTree = "<group>"; };
@@ -131,16 +151,17 @@
 		A310DBD005228101A4E96BFE /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				BB766BDE282951FB00AB656E /* Views */,
 				BB766BDB282947B000AB656E /* Cell */,
+				BB766BDE282951FB00AB656E /* Views */,
 				BB17E1C82827E70B000CDC5E /* ViewModel */,
-				3778558E73FF34AF2D7A180D /* InputOutput */,
+				BB23D6A7282A68590012FFAD /* Transitions */,
 				2B5F2565DA6C8B83E02753FB /* StoriesAssembly.swift */,
 				148B847961BE93D6E5C1D83C /* StoriesViewController.swift */,
 				6386F1E6E9B1CA5C88AC3E44 /* StoriesInteractor.swift */,
 				F14429444A4F39F95537EC85 /* StoriesPresenter.swift */,
 				A3DAE4B7CAF654BBCF68789C /* StoriesDataFlow.swift */,
 				72EABE341A32C1A89CF37435 /* StoriesProvider.swift */,
+				3778558E73FF34AF2D7A180D /* InputOutput */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -181,6 +202,50 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BB23D6A7282A68590012FFAD /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				BB23D6A8282A686D0012FFAD /* Animation */,
+				BB23D6A9282A68780012FFAD /* TransitionInteraction */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		BB23D6A8282A686D0012FFAD /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BB23D6AA282A689A0012FFAD /* GrowPresentAnimationController.swift */,
+				BB23D6AC282A68D80012FFAD /* ShrinkDismissAnimationController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		BB23D6A9282A68780012FFAD /* TransitionInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				BB23D6AE282A691B0012FFAD /* SwipeInteractionController.swift */,
+			);
+			path = TransitionInteraction;
+			sourceTree = "<group>";
+		};
+		BB23D6B0282A71010012FFAD /* OpenedStories */ = {
+			isa = PBXGroup;
+			children = (
+				BB23D6B1282A71280012FFAD /* OpenedStoriesAssembly.swift */,
+				BB23D6B9282A74180012FFAD /* OpenedStoriesPageViewController.swift */,
+				BB23D6BB282A743F0012FFAD /* OpenedStoriesPresenter.swift */,
+			);
+			path = OpenedStories;
+			sourceTree = "<group>";
+		};
+		BB23D6B6282A71CB0012FFAD /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				BB23D6B3282A719F0012FFAD /* StoryOpenSource.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
 		BB33C4562827203000ED865E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */,
+				BB23D6B7282A72A80012FFAD /* Assembly.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -251,6 +317,7 @@
 			children = (
 				BB33C466282723B600ED865E /* Font.swift */,
 				BB33C468282723DD00ED865E /* ReuseIdentifier.swift */,
+				BB23D6A5282A64FF0012FFAD /* UIApplication+Extension.swift */,
 				BB33C46D2827245000ED865E /* UIColor+Extension.swift */,
 				BB766BE62829A8FE00AB656E /* UIImageView+Extension.swift */,
 			);
@@ -282,6 +349,7 @@
 				BB33C4802827351A00ED865E /* Result+Stepik.swift */,
 				BB766BD92829228200AB656E /* Parser.swift */,
 				BB766BE82829A92A00AB656E /* Cacher.swift */,
+				BB23D6BD282A75390012FFAD /* NSNotification+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -289,7 +357,9 @@
 		BB6A221B2827015D00964ACE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BB23D6B0282A71010012FFAD /* OpenedStories */,
 				A310DBD005228101A4E96BFE /* Stories */,
+				BB23D6B6282A71CB0012FFAD /* Story */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -446,20 +516,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6A22262827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift in Sources */,
+				BB23D6A6282A64FF0012FFAD /* UIApplication+Extension.swift in Sources */,
 				BB17E1C72827E186000CDC5E /* Typealias.swift in Sources */,
 				BB766BE02829522900AB656E /* StoriesViewProtocol.swift in Sources */,
+				BB23D6B8282A72A80012FFAD /* Assembly.swift in Sources */,
+				BB23D6AD282A68D80012FFAD /* ShrinkDismissAnimationController.swift in Sources */,
 				BB33C46E2827245000ED865E /* UIColor+Extension.swift in Sources */,
 				BB33C46C2827241B00ED865E /* Colors.swift in Sources */,
 				BBB44FE52826F7D600645436 /* AppDelegate.swift in Sources */,
 				BBB44FE72826F7D600645436 /* SceneDelegate.swift in Sources */,
 				BB17E1C22827CD97000CDC5E /* NetworkService+Strory.swift in Sources */,
 				BB766BE228297A0E00AB656E /* StoriesCollectionViewAdapter.swift in Sources */,
+				BB23D6B2282A71280012FFAD /* OpenedStoriesAssembly.swift in Sources */,
 				BB17E1BC2827CA0A000CDC5E /* API.swift in Sources */,
 				BB33C47E28272F1000ED865E /* PartTypeButton.swift in Sources */,
+				BB23D6B4282A719F0012FFAD /* StoryOpenSource.swift in Sources */,
+				BB23D6BA282A74180012FFAD /* OpenedStoriesPageViewController.swift in Sources */,
 				96A0569AF6E82CC797194AC9 /* StoriesAssembly.swift in Sources */,
 				C77D92D2C062732B6F4593E7 /* StoriesViewController.swift in Sources */,
 				BB766BE92829A92A00AB656E /* Cacher.swift in Sources */,
 				BB33C45F2827230300ED865E /* AppDependency.swift in Sources */,
+				BB23D6BE282A75390012FFAD /* NSNotification+Extension.swift in Sources */,
 				BB33C47628272A8A00ED865E /* StoryPart.swift in Sources */,
 				BB766BE72829A8FE00AB656E /* UIImageView+Extension.swift in Sources */,
 				BB33C45D282722E000ED865E /* AppCoordinator.swift in Sources */,
@@ -473,6 +550,7 @@
 				C6E312E61C1BDC8B3C1968F5 /* StoriesDataFlow.swift in Sources */,
 				BB17E1C42827CDEE000CDC5E /* URLFactory.swift in Sources */,
 				2D3D3008ABC6DA9999A63F32 /* StoriesProvider.swift in Sources */,
+				BB23D6BC282A743F0012FFAD /* OpenedStoriesPresenter.swift in Sources */,
 				BB17E1CA2827E71B000CDC5E /* StoriesViewModel.swift in Sources */,
 				BB33C467282723B600ED865E /* Font.swift in Sources */,
 				BB17E1CC2827F308000CDC5E /* Meta.swift in Sources */,
@@ -481,9 +559,11 @@
 				7C6C41BA50BB8AEC7C8E4093 /* StoriesInputProtocol.swift in Sources */,
 				BB766BDD282947C300AB656E /* StoriesCollectionViewCell.swift in Sources */,
 				E1BCD66FCDF99E899E7695E1 /* StoriesOutputProtocol.swift in Sources */,
+				BB23D6AB282A689A0012FFAD /* GrowPresentAnimationController.swift in Sources */,
 				BB33C4742827292400ED865E /* Story.swift in Sources */,
 				BB17E1BE2827CAA9000CDC5E /* NetworkService.swift in Sources */,
 				BB33C47A28272C2000ED865E /* Response.swift in Sources */,
+				BB23D6AF282A691B0012FFAD /* SwipeInteractionController.swift in Sources */,
 				BB33C47C28272D2900ED865E /* PartTypeText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

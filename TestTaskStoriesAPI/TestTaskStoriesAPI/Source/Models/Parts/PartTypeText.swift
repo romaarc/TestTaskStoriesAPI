@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct PartTypeText: Decodable {
     let title: String?

@@ -5,6 +5,7 @@
 //  Created by Roman Gorshkov on 09.05.2022.
 //
 
+import SnapKit
 import UIKit
 
 final class StoryCollectionViewCell: UICollectionViewCell {

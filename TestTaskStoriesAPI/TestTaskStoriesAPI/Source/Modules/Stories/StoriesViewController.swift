@@ -6,6 +6,7 @@ protocol StoriesViewControllerProtocol: AnyObject {
 
 final class StoriesViewController: UIViewController {
     private let interactor: StoriesInteractorProtocol
+    private var currentItemFrame: CGRect?
     
     var storiesView: StoriesView? { self.view as? StoriesView }
 
@@ -28,8 +29,10 @@ final class StoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.transitioningDelegate = self
+        self.modalPresentationStyle = .custom
         collectionViewAdapter.delegate = self
-        interactor.doStoriesLoad(request: .init())
+        fetch()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -38,6 +41,10 @@ final class StoriesViewController: UIViewController {
 }
 
 extension StoriesViewController: StoriesViewControllerProtocol {
+    func fetch() {
+        interactor.doStoriesLoad(request: .init())
+    }
+    
     func displayStories(viewModel: Stories.StoriesLoad.ViewModel) {
         collectionViewAdapter.components = viewModel.model
         storiesView?.updateCollectionViewData(
@@ -47,6 +54,45 @@ extension StoriesViewController: StoriesViewControllerProtocol {
     }
 }
 
+    // MARK: - StoriesViewController: StoriesCollectionViewAdapterDelegate -
 extension StoriesViewController: StoriesCollectionViewAdapterDelegate {
-    func storiesCollectionViewAdapter(_ adapter: StoriesCollectionViewAdapter, didSelectComponentAt indexPath: IndexPath) {}
+    func storiesCollectionViewAdapter(_ adapter: StoriesCollectionViewAdapter, currentItemFrame: CGRect?, didSelectComponentAt indexPath: IndexPath) {
+        self.currentItemFrame = currentItemFrame
+    }
+}
+
+    // MARK: - StoriesViewController: UIViewControllerTransitioningDelegate -
+extension StoriesViewController: UIViewControllerTransitioningDelegate {
+    func animationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController,
+        source: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        guard let currentItemFrame = self.currentItemFrame else { return nil }
+        return GrowPresentAnimationController(originFrame: currentItemFrame)
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        guard let revealVC = dismissed as? OpenedStoriesPageViewController,
+//              let currentItemFrame = self.currentItemFrame else {
+//            return nil
+//        }
+//
+//        return ShrinkDismissAnimationController(
+//            destinationFrame: currentItemFrame,
+//            interactionController: revealVC.swipeInteractionController
+//        )
+        nil
+    }
+
+    func interactionControllerForDismissal(
+        using animator: UIViewControllerAnimatedTransitioning
+    ) -> UIViewControllerInteractiveTransitioning? {
+        guard let animator = animator as? ShrinkDismissAnimationController,
+              let interactionController = animator.interactionController,
+              interactionController.interactionInProgress else {
+            return nil
+        }
+        return interactionController
+    }
 }

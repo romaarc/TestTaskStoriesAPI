@@ -55,7 +55,7 @@ private extension AppCoordinator {
         guard let navController = self.navigationControllers[.stories] else {
             fatalError("something wrong with appCoordinator")
         }
-        let context = StoriesContext(moduleDependencies: appDependency)
+        let context = ModuleContext(moduleDependencies: appDependency)
         let container = StoriesAssembly()
         let storiesVC = container.makeModule(with: context)
         storiesVC.navigationItem.title = Localize.stories
