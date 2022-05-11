@@ -55,6 +55,16 @@
 		BB33C47C28272D2900ED865E /* PartTypeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33C47B28272D2900ED865E /* PartTypeText.swift */; };
 		BB33C47E28272F1000ED865E /* PartTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33C47D28272F1000ED865E /* PartTypeButton.swift */; };
 		BB33C4812827351A00ED865E /* Result+Stepik.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33C4802827351A00ED865E /* Result+Stepik.swift */; };
+		BB636314282C026E00A76AD7 /* TextStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636313282C026E00A76AD7 /* TextStoryView.swift */; };
+		BB636316282C042500A76AD7 /* StoryPartGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636315282C042500A76AD7 /* StoryPartGradientView.swift */; };
+		BB636318282C051800A76AD7 /* CAGradientLayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636317282C051800A76AD7 /* CAGradientLayer+Extension.swift */; };
+		BB63631A282C064E00A76AD7 /* StoryPartTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636319282C064E00A76AD7 /* StoryPartTitleLabel.swift */; };
+		BB63631C282C06C600A76AD7 /* StoryReactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63631B282C06C600A76AD7 /* StoryReactionsView.swift */; };
+		BB63631E282C08B100A76AD7 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63631D282C08B100A76AD7 /* ImageButton.swift */; };
+		BB636320282C0CA300A76AD7 /* LayoutInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63631F282C0CA300A76AD7 /* LayoutInsets.swift */; };
+		BB636322282C0D5400A76AD7 /* StepikButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636321282C0D5400A76AD7 /* StepikButton.swift */; };
+		BB636324282C128F00A76AD7 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636323282C128F00A76AD7 /* CGSize+Extension.swift */; };
+		BB636327282C3FD600A76AD7 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB636326282C3FD600A76AD7 /* Collection.swift */; };
 		BB6A221E2827062700964ACE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6A221D2827062700964ACE /* SnapKit */; };
 		BB6A2221282706A600964ACE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB6A2220282706A600964ACE /* PromiseKit */; };
 		BB6A22262827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */; };
@@ -125,6 +135,16 @@
 		BB33C47B28272D2900ED865E /* PartTypeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTypeText.swift; sourceTree = "<group>"; };
 		BB33C47D28272F1000ED865E /* PartTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTypeButton.swift; sourceTree = "<group>"; };
 		BB33C4802827351A00ED865E /* Result+Stepik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Stepik.swift"; sourceTree = "<group>"; };
+		BB636313282C026E00A76AD7 /* TextStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStoryView.swift; sourceTree = "<group>"; };
+		BB636315282C042500A76AD7 /* StoryPartGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPartGradientView.swift; sourceTree = "<group>"; };
+		BB636317282C051800A76AD7 /* CAGradientLayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extension.swift"; sourceTree = "<group>"; };
+		BB636319282C064E00A76AD7 /* StoryPartTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPartTitleLabel.swift; sourceTree = "<group>"; };
+		BB63631B282C06C600A76AD7 /* StoryReactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryReactionsView.swift; sourceTree = "<group>"; };
+		BB63631D282C08B100A76AD7 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		BB63631F282C0CA300A76AD7 /* LayoutInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutInsets.swift; sourceTree = "<group>"; };
+		BB636321282C0D5400A76AD7 /* StepikButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepikButton.swift; sourceTree = "<group>"; };
+		BB636323282C128F00A76AD7 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		BB636326282C3FD600A76AD7 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		BB6A22252827079800964ACE /* ProgrammaticallyInitializableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyInitializableViewProtocol.swift; sourceTree = "<group>"; };
 		BB766BD92829228200AB656E /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		BB766BDC282947C300AB656E /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -287,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				BB23D6C5282AECB10012FFAD /* StoryPartViewFactory.swift */,
+				BB636312282C023F00A76AD7 /* TextStoryView */,
+				BB636325282C1F7D00A76AD7 /* FeedbackStoryView */,
 			);
 			path = StoryPart;
 			sourceTree = "<group>";
@@ -366,6 +388,10 @@
 				BB33C46D2827245000ED865E /* UIColor+Extension.swift */,
 				BB766BE62829A8FE00AB656E /* UIImageView+Extension.swift */,
 				BB23D6C2282AB6F20012FFAD /* UIView+Extension.swift */,
+				BB63631D282C08B100A76AD7 /* ImageButton.swift */,
+				BB63631F282C0CA300A76AD7 /* LayoutInsets.swift */,
+				BB636321282C0D5400A76AD7 /* StepikButton.swift */,
+				BB636323282C128F00A76AD7 /* CGSize+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -396,8 +422,28 @@
 				BB766BD92829228200AB656E /* Parser.swift */,
 				BB766BE82829A92A00AB656E /* Cacher.swift */,
 				BB23D6BD282A75390012FFAD /* NSNotification+Extension.swift */,
+				BB636317282C051800A76AD7 /* CAGradientLayer+Extension.swift */,
+				BB636326282C3FD600A76AD7 /* Collection.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		BB636312282C023F00A76AD7 /* TextStoryView */ = {
+			isa = PBXGroup;
+			children = (
+				BB636315282C042500A76AD7 /* StoryPartGradientView.swift */,
+				BB63631B282C06C600A76AD7 /* StoryReactionsView.swift */,
+				BB636319282C064E00A76AD7 /* StoryPartTitleLabel.swift */,
+				BB636313282C026E00A76AD7 /* TextStoryView.swift */,
+			);
+			path = TextStoryView;
+			sourceTree = "<group>";
+		};
+		BB636325282C1F7D00A76AD7 /* FeedbackStoryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedbackStoryView;
 			sourceTree = "<group>";
 		};
 		BB6A221B2827015D00964ACE /* Modules */ = {
@@ -566,6 +612,7 @@
 				BB23D6A6282A64FF0012FFAD /* UIApplication+Extension.swift in Sources */,
 				BB17E1C72827E186000CDC5E /* Typealias.swift in Sources */,
 				BB766BE02829522900AB656E /* StoriesViewProtocol.swift in Sources */,
+				BB636322282C0D5400A76AD7 /* StepikButton.swift in Sources */,
 				BB23D6B8282A72A80012FFAD /* Assembly.swift in Sources */,
 				BB23D6AD282A68D80012FFAD /* ShrinkDismissAnimationController.swift in Sources */,
 				BB33C46E2827245000ED865E /* UIColor+Extension.swift in Sources */,
@@ -575,23 +622,29 @@
 				BB17E1C22827CD97000CDC5E /* NetworkService+Strory.swift in Sources */,
 				BB766BE228297A0E00AB656E /* StoriesCollectionViewAdapter.swift in Sources */,
 				BB23D6B2282A71280012FFAD /* OpenedStoriesAssembly.swift in Sources */,
+				BB63631A282C064E00A76AD7 /* StoryPartTitleLabel.swift in Sources */,
 				BB17E1BC2827CA0A000CDC5E /* API.swift in Sources */,
 				BB33C47E28272F1000ED865E /* PartTypeButton.swift in Sources */,
 				BB23D6B4282A719F0012FFAD /* StoryOpenSource.swift in Sources */,
 				BB23D6BA282A74180012FFAD /* OpenedStoriesPageViewController.swift in Sources */,
 				96A0569AF6E82CC797194AC9 /* StoriesAssembly.swift in Sources */,
 				BB23D6C3282AB6F20012FFAD /* UIView+Extension.swift in Sources */,
+				BB636320282C0CA300A76AD7 /* LayoutInsets.swift in Sources */,
 				C77D92D2C062732B6F4593E7 /* StoriesViewController.swift in Sources */,
 				BB766BE92829A92A00AB656E /* Cacher.swift in Sources */,
 				BB33C45F2827230300ED865E /* AppDependency.swift in Sources */,
+				BB636318282C051800A76AD7 /* CAGradientLayer+Extension.swift in Sources */,
+				BB63631C282C06C600A76AD7 /* StoryReactionsView.swift in Sources */,
 				BB23D6BE282A75390012FFAD /* NSNotification+Extension.swift in Sources */,
 				BB33C47628272A8A00ED865E /* StoryPart.swift in Sources */,
 				BB766BE72829A8FE00AB656E /* UIImageView+Extension.swift in Sources */,
 				BB33C45D282722E000ED865E /* AppCoordinator.swift in Sources */,
+				BB636324282C128F00A76AD7 /* CGSize+Extension.swift in Sources */,
 				BB33C4812827351A00ED865E /* Result+Stepik.swift in Sources */,
 				BB17E1C02827CD26000CDC5E /* NetworkServiceProtocol.swift in Sources */,
 				5470C8568C23A39D3F014BF6 /* StoriesInteractor.swift in Sources */,
 				F490C42011605780E71F4D79 /* StoriesPresenter.swift in Sources */,
+				BB636316282C042500A76AD7 /* StoryPartGradientView.swift in Sources */,
 				BB33C470282725AB00ED865E /* Localize.swift in Sources */,
 				BB33C469282723DD00ED865E /* ReuseIdentifier.swift in Sources */,
 				BB33C472282728C300ED865E /* CachedValue.swift in Sources */,
@@ -600,6 +653,7 @@
 				BB23D6C1282A84550012FFAD /* SegmentedProgressView.swift in Sources */,
 				2D3D3008ABC6DA9999A63F32 /* StoriesProvider.swift in Sources */,
 				BB23D6BC282A743F0012FFAD /* OpenedStoriesPresenter.swift in Sources */,
+				BB636314282C026E00A76AD7 /* TextStoryView.swift in Sources */,
 				BB17E1CA2827E71B000CDC5E /* StoriesViewModel.swift in Sources */,
 				BB33C467282723B600ED865E /* Font.swift in Sources */,
 				BB17E1CC2827F308000CDC5E /* Meta.swift in Sources */,
@@ -614,9 +668,11 @@
 				BB33C47A28272C2000ED865E /* Response.swift in Sources */,
 				BB23D6AF282A691B0012FFAD /* SwipeInteractionController.swift in Sources */,
 				BB33C47C28272D2900ED865E /* PartTypeText.swift in Sources */,
+				BB636327282C3FD600A76AD7 /* Collection.swift in Sources */,
 				2C7092FE0AC482CFC092B90B /* StoryAssembly.swift in Sources */,
 				27A58E2BE100999E5E5D4963 /* StoryViewController.swift in Sources */,
 				E7EA9AC696DEA8D4D5D0AEA8 /* StoryInteractor.swift in Sources */,
+				BB63631E282C08B100A76AD7 /* ImageButton.swift in Sources */,
 				37E6CD97D37CA94D494E0CD8 /* StoryPresenter.swift in Sources */,
 				5E3F82E0DA3F353541ACE20E /* StoryDataFlow.swift in Sources */,
 				669575C4DED7BA4E3B8B153E /* StoryProvider.swift in Sources */,

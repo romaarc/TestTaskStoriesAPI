@@ -14,20 +14,20 @@ final class StoryView: UIView {
     
     let appearance: Appearance
 
-    lazy var progressView: SegmentedProgressView = {
+    var progressView: SegmentedProgressView = {
         let view = SegmentedProgressView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    lazy var partsContainerView: UIView = {
+    var partsContainerView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         return view
     }()
     
-    lazy var closeButton: UIButton = {
+    var closeButton: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "stories-close-button-icon.pdf"), for: .normal)
@@ -49,7 +49,7 @@ final class StoryView: UIView {
         return effect
     }()
     
-    lazy var closeButtonTapProxyView: TapProxyView = {
+    var closeButtonTapProxyView: TapProxyView = {
         let view = TapProxyView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
@@ -96,7 +96,6 @@ final class StoryView: UIView {
 extension StoryView: ProgrammaticallyInitializableViewProtocol {
     func setupView() {
         backgroundColor = .stepikSystemGray
-        progressView.backgroundColor = .white
     }
 
     func addSubviews() {

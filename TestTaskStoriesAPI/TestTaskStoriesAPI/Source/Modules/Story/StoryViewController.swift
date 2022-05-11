@@ -43,9 +43,9 @@ final class StoryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         didAppear = true
-       
-        if didAppear, didLayout { onAppearBlock?() }
-        
+        if didAppear, didLayout {
+            onAppearBlock?()
+        }
         interactor.didAppear()
         interactor.resume()
     }
@@ -53,7 +53,9 @@ final class StoryViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         didLayout = true
-        if didAppear, didLayout { onAppearBlock?() }
+        if didAppear, didLayout {
+            onAppearBlock?()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,14 +80,14 @@ extension StoryViewController: StoryViewControllerProtocol {
         storyView?.progressView.completion = { [weak self] in
             self?.interactor.finishedAnimating()
         }
-        
+
         storyView?.progressView.segmentsCount = viewModel.result.parts?.count ?? 0
-        
+
         let gestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(StoryViewController.didTap(recognizer:))
         )
-        
+
         gestureRecognizer.delegate = self
         self.view.addGestureRecognizer(gestureRecognizer)
         gestureRecognizer.cancelsTouchesInView = false

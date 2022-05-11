@@ -33,20 +33,21 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
     var moduleForStoryID: [Int: UIViewController] = [:]
     
     var currentModule: UIViewController {
-        let story = self.stories[self.currentPosition]
-        return self.getModule(story: story)
+        let story = stories[self.currentPosition]
+        return getModule(story: story)
     }
+    
     var nextModule: UIViewController? {
-//        if let story = self.stories[safe: self.currentPosition + 1] {
-//            return self.getModule(story: story)
-//        }
+        if let story = stories[safe: currentPosition + 1] {
+            return getModule(story: story)
+        }
         return nil
     }
 
     var prevModule: UIViewController? {
-//        if let story = self.stories[safe: self.currentPosition - 1] {
-//            return self.getModule(story: story)
-//        }
+        if let story = stories[safe: currentPosition - 1] {
+            return getModule(story: story)
+        }
         return nil
     }
 
@@ -94,14 +95,10 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
     }
 
     private func makeModule(for story: StoriesViewModel) -> UIViewController {
-//        StoryAssembly(
-//            story: story,
-//            storyOpenSource: self.storyOpenSource,
-//            navigationDelegate: self
-//        ).makeModule()
         let assembly = StoryAssembly(
-            story: story
-            , storyOpenSource: storyOpenSource)
+            story: story,
+            storyOpenSource: storyOpenSource,
+            navigationDelegate: self)
         return assembly.makeModule()
     }
 

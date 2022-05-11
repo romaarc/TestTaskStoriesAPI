@@ -9,31 +9,23 @@ import UIKit
 
 final class StoryPartViewFactory {
     
-//    func makeView(storyPart: StoryPartViewModel) -> (UIView & UIStoryPartViewProtocol)? {
-////        guard let type = storyPart.type else {
-////            return nil
-////        }
-//
-//        switch storyPart.type {
-//        case .text:
-//            guard let textStoryPart = storyPart as? TextStoryPart else {
-//                return nil
-//            }
-//
-////            let textStoryView: TextStoryView = .fromNib()
-////            textStoryView.configure(storyPart: textStoryPart, urlNavigationDelegate: self.urlNavigationDelegate)
-////
-////            return textStoryView
-//        case .feedback: break
-////            guard let feedbackStoryPart = storyPart as? FeedbackStoryPart else {
-////                return nil
-////            }
-////
-////            let feedbackStoryView = FeedbackStoryView()
-////            feedbackStoryView.configure(storyPart: feedbackStoryPart)
-////
-////            return feedbackStoryView
-//        }
-//    }
+    static func makeView(storyPart: StoryPartViewModel) -> (UIView & UIStoryPartViewProtocol)? {
+        switch storyPart.type {
+        case .text:
+            let textStoryView: TextStoryView = TextStoryView(frame: UIScreen.main.bounds)
+            textStoryView.configure(storyPart: storyPart)
+            return textStoryView
+        case .feedback:
+            return nil
+            //guard let feedbackStoryPart = storyPart as? FeedbackStoryPart else {
+            ////                return nil
+            ////            }
+            ////
+            ////            let feedbackStoryView = FeedbackStoryView()
+            ////            feedbackStoryView.configure(storyPart: feedbackStoryPart)
+            ////
+            ////            return feedbackStoryView
+        }
+   }
 }
 

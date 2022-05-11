@@ -33,8 +33,6 @@ final class StoryPresenter: StoryPresenterProtocol {
     private var viewForIndex: [Int: UIView & UIStoryPartViewProtocol] = [:]
     private var shouldRestartSegment = false
     private var story: StoriesViewModel? = nil
-    //private var storyPartViewFactory: StoryPartViewFactory
-    //private var urlNavigator: URLNavigator
 
     func presentStoryResult(response: StoryDataFlow.StoryLoad.Response) {
         story = response.response
@@ -68,46 +66,28 @@ extension StoryPresenter {
             viewController?.animate(view: viewToAnimate)
             viewController?.animateProgress(segment: partToAnimate, duration: TimeInterval(animatingStoryPart.duration))
         } else {
-//            guard var viewToAnimate = storyPartViewFactory.makeView(storyPart: animatingStoryPart) else {
-//                return
-//            }
+            guard var viewToAnimate = StoryPartViewFactory.makeView(storyPart: animatingStoryPart) else {
+                return
+            }
+            
+            viewToAnimate.completion = { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                if self.partToAnimate == animatingStoryPart.position {
+                    self.viewController?.animateProgress(
+                        segment: self.partToAnimate,
+                        duration: TimeInterval(animatingStoryPart.duration)
+                    )
+                }
+            }
+        
+            viewToAnimate.onDidChangeReaction = { _ in }
+
+            viewController?.animate(view: viewToAnimate)
+            viewController?.animateProgress(segment: partToAnimate, duration: TimeInterval(animatingStoryPart.duration))
         }
-//
-//            viewToAnimate.completion = { [weak self] in
-//                guard let strongSelf = self else {
-//                    return
-//                }
-//
-//                if strongSelf.partToAnimate == animatingStoryPart.position {
-//                    strongSelf.view?.animateProgress(
-//                        segment: strongSelf.partToAnimate,
-//                        duration: animatingStoryPart.duration
-//                    )
-//                }
-//            }
-//            viewToAnimate.onDidChangeReaction = { [weak self] reaction in
-//                guard let strongSelf = self else {
-//                    return
-//                }
-//
-//                if strongSelf.partToAnimate == animatingStoryPart.position {
-//                    strongSelf.saveStoryPartReaction(reaction: reaction, storyPart: animatingStoryPart).done { _ in }
-//                    strongSelf.analytics.send(
-//                        .storyReactionPressed(
-//                            id: animatingStoryPart.storyID,
-//                            position: animatingStoryPart.position,
-//                            reaction: reaction
-//                        )
-//                    )
-//                }
-//            }
-//
-//            self.fetchStoryPartReaction(animatingStoryPart).done { [weak viewToAnimate] reaction in
-//                viewToAnimate?.setReaction(reaction?.storyReaction)
-//            }
-//
-//            self.view?.animate(view: viewToAnimate)
-        //}
     }
     
     private func showPreviousStory() {

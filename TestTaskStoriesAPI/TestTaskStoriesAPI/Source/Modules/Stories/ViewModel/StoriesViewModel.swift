@@ -43,7 +43,7 @@ final class TextStoryPart {
             let backgroundStyle = Text.BackgroundStyle(rawValue: partTypeText.backgroundStyle ?? "") ?? .none
             
             self.text = Text(title: partTypeText.title,
-                             text: partTypeText.title,
+                             text: partTypeText.text,
                              textColor: textColor,
                              backgroundStyle: backgroundStyle)
         }
