@@ -5,6 +5,8 @@
 # Экраны
 ![hippo](https://media.giphy.com/media/x93hmivdOzgpgC5NRr/giphy.gif)
 
+https://user-images.githubusercontent.com/28999468/167955316-1bb57016-4880-4781-8c36-c663da973e3d.MP4
+
 ## Установка
 
 У вас должны быть установлены SPM:
