@@ -15,3 +15,4 @@ struct StoryPart: Decodable {
     let text: PartTypeText?
     let button: PartTypeButton?
 }
+

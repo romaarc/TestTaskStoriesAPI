@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol StoryNavigationDelegate: AnyObject {
+    func didFinishForward()
+    func didFinishBack()
+}
+
 protocol OpenedStoriesPresenterProtocol: AnyObject {
     var currentModule: UIViewController { get }
     var nextModule: UIViewController? { get }
@@ -94,7 +99,10 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
 //            storyOpenSource: self.storyOpenSource,
 //            navigationDelegate: self
 //        ).makeModule()
-        UIViewController()
+        let assembly = StoryAssembly(
+            story: story
+            , storyOpenSource: storyOpenSource)
+        return assembly.makeModule()
     }
 
     @objc
@@ -111,20 +119,20 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
     }
 }
 
-//extension OpenedStoriesPresenter: StoryNavigationDelegate {
-//    func didFinishForward() {
-//        if let nextModule = self.nextModule {
-//            self.view?.set(module: nextModule, direction: .forward, animated: true)
-//        } else {
-//            self.view?.close()
-//        }
-//    }
-//
-//    func didFinishBack() {
-//        if let prevModule = self.prevModule {
-//            self.view?.set(module: prevModule, direction: .reverse, animated: true)
-//        } else {
-//            self.view?.close()
-//        }
-//    }
-//}
+extension OpenedStoriesPresenter: StoryNavigationDelegate {
+    func didFinishForward() {
+        if let nextModule = self.nextModule {
+            self.view?.set(module: nextModule, direction: .forward, animated: true)
+        } else {
+            self.view?.close()
+        }
+    }
+
+    func didFinishBack() {
+        if let prevModule = self.prevModule {
+            self.view?.set(module: prevModule, direction: .reverse, animated: true)
+        } else {
+            self.view?.close()
+        }
+    }
+}

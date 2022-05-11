@@ -52,12 +52,24 @@ extension StoriesViewController: StoriesViewControllerProtocol {
             dataSource: collectionViewAdapter
         )
     }
+    
+    func showStory(at index: Int) {
+        let moduleToPresent = OpenedStoriesAssembly(
+            startPosition: index,
+            stories: collectionViewAdapter.components,
+            storyOpenSource: .catalog)
+            .makeModule(with: nil)
+        moduleToPresent.modalPresentationStyle = .custom
+        moduleToPresent.transitioningDelegate = self
+        self.present(moduleToPresent, animated: true, completion: nil)
+    }
 }
 
     // MARK: - StoriesViewController: StoriesCollectionViewAdapterDelegate -
 extension StoriesViewController: StoriesCollectionViewAdapterDelegate {
     func storiesCollectionViewAdapter(_ adapter: StoriesCollectionViewAdapter, currentItemFrame: CGRect?, didSelectComponentAt indexPath: IndexPath) {
         self.currentItemFrame = currentItemFrame
+        showStory(at: indexPath.item)
     }
 }
 
@@ -73,16 +85,15 @@ extension StoriesViewController: UIViewControllerTransitioningDelegate {
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        guard let revealVC = dismissed as? OpenedStoriesPageViewController,
-//              let currentItemFrame = self.currentItemFrame else {
-//            return nil
-//        }
-//
-//        return ShrinkDismissAnimationController(
-//            destinationFrame: currentItemFrame,
-//            interactionController: revealVC.swipeInteractionController
-//        )
-        nil
+        guard let revealVC = dismissed as? OpenedStoriesPageViewController,
+              let currentItemFrame = self.currentItemFrame else {
+            return nil
+        }
+
+        return ShrinkDismissAnimationController(
+            destinationFrame: currentItemFrame,
+            interactionController: revealVC.swipeInteractionController
+        )
     }
 
     func interactionControllerForDismissal(

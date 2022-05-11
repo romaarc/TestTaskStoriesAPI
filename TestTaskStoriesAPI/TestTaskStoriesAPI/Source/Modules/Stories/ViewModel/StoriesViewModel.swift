@@ -21,10 +21,15 @@ struct StoriesViewModel {
 struct StoryPartViewModel {
     let id: Int
     let position: Int
-    let type: String
+    let type: PartType
     let duration: Int
     let image: URL?
     let textStoryPart: TextStoryPart?
+}
+
+enum PartType: String {
+    case text
+    case feedback
 }
 
 final class TextStoryPart {

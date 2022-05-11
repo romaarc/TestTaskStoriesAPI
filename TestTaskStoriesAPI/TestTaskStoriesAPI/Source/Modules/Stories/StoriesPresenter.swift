@@ -19,7 +19,7 @@ final class StoriesPresenter: StoriesPresenterProtocol {
                     let textStoryPart = TextStoryPart(partTypeText: part.text,
                                                       partTypeButton: part.button)
                     let partModel = StoryPartViewModel(id: story.id, position: part.position,
-                                                            type: part.type,
+                                                       type: PartType(rawValue: part.type)!,
                                                             duration: part.duration,
                                                             image: URL(string: part.image),
                                                             textStoryPart: textStoryPart)

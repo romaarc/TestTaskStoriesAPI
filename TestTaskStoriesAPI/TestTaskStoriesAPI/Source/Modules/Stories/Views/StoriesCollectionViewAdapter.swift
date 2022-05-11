@@ -33,7 +33,7 @@ extension StoriesCollectionViewAdapter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         components.count
     }
-
+    
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
@@ -42,8 +42,24 @@ extension StoriesCollectionViewAdapter: UICollectionViewDataSource {
         let component = components[indexPath.row]
         cell.update(imagePath: component.cover, title: component.title, isWatched: false)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 1, delay: .zero, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut) {
+                cell.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+            }
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 0.7, delay: .zero, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+                cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+        }
+    }
+}
 
 // MARK: - StoriesCollectionViewAdapter: UICollectionViewDelegateFlowLayout -
 
