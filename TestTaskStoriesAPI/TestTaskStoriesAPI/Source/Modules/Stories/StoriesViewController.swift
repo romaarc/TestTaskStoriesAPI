@@ -89,7 +89,10 @@ extension StoriesViewController: UIViewControllerTransitioningDelegate {
               let currentItemFrame = self.currentItemFrame else {
             return nil
         }
-
+        storiesView?.updateCollectionViewData(
+            delegate: collectionViewAdapter,
+            dataSource: collectionViewAdapter
+        )
         return ShrinkDismissAnimationController(
             destinationFrame: currentItemFrame,
             interactionController: revealVC.swipeInteractionController

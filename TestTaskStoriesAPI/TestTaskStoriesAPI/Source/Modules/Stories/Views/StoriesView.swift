@@ -65,15 +65,6 @@ final class StoriesView: UIView, StoriesViewProtocol {
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
 
-    func showLoading() {
-//        self.collectionView.skeleton.viewBuilder = { SimpleCourseListCellSkeletonView() }
-//        self.collectionView.skeleton.show()
-    }
-
-    func hideLoading() {
-        //self.collectionView.skeleton.hide()
-    }
-
     func invalidateCollectionViewLayout() {
         self.collectionView.collectionViewLayout.invalidateLayout()
         self.invalidateIntrinsicContentSize()

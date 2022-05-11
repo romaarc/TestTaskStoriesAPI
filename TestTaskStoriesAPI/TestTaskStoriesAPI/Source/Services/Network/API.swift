@@ -4,7 +4,7 @@
 //
 //  Created by Roman Gorshkov on 08.05.2022.
 //
-//https://stepik.org:443/api/story-templates?page=1&page_size=10
+//https://stepik.org:443/api/story-templates?page=1&page_size=16
 
 import Foundation
 

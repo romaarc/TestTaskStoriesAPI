@@ -14,15 +14,9 @@ protocol ProgrammaticallyInitializableViewProtocol: AnyObject {
 }
 
 extension ProgrammaticallyInitializableViewProtocol where Self: UIView {
-    func setupView() {
-        // Empty body to make method optional
-    }
+    func setupView() {}
 
-    func addSubviews() {
-        // Empty body to make method optional
-    }
+    func addSubviews() {}
 
-    func makeConstraints() {
-        // Empty body to make method optional
-    }
+    func makeConstraints() {}
 }

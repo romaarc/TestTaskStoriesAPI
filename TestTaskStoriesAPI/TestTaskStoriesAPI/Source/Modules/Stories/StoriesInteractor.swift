@@ -6,8 +6,6 @@ protocol StoriesInteractorProtocol {
 }
 
 final class StoriesInteractor: StoriesInteractorProtocol {
-    weak var moduleOutput: StoriesOutputProtocol?
-
     private let presenter: StoriesPresenterProtocol
     private let provider: StoriesProviderProtocol
 
@@ -20,7 +18,7 @@ final class StoriesInteractor: StoriesInteractorProtocol {
     }
 
     func doStoriesLoad(request: Stories.StoriesLoad.Request) {
-        let params = StoryURLParameters(page: "3", pageSize: "10")
+        let params = StoryURLParameters(page: "1", pageSize: "16")
         self.provider.fetch(params: params).done { stories in
             self.presenter.presentStoriesResult(response: .init(result: .success(stories)))
         }.catch { error in
@@ -32,5 +30,3 @@ final class StoriesInteractor: StoriesInteractorProtocol {
         case unloadable
     }
 }
-
-extension StoriesInteractor: StoriesInputProtocol { }

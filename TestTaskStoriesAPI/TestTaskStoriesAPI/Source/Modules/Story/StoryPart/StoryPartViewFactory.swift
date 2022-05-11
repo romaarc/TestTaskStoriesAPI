@@ -8,7 +8,6 @@
 import UIKit
 
 final class StoryPartViewFactory {
-    
     static func makeView(storyPart: StoryPartViewModel) -> (UIView & UIStoryPartViewProtocol)? {
         switch storyPart.type {
         case .text:
@@ -17,15 +16,6 @@ final class StoryPartViewFactory {
             return textStoryView
         case .feedback:
             return nil
-            //guard let feedbackStoryPart = storyPart as? FeedbackStoryPart else {
-            ////                return nil
-            ////            }
-            ////
-            ////            let feedbackStoryView = FeedbackStoryView()
-            ////            feedbackStoryView.configure(storyPart: feedbackStoryPart)
-            ////
-            ////            return feedbackStoryView
         }
    }
 }
-

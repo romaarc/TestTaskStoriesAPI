@@ -19,8 +19,6 @@ protocol OpenedStoriesPresenterProtocol: AnyObject {
 
     func onSwipeDismiss()
     func refresh()
-
-    func setStatusBarStyle(_ statusBarStyle: UIStatusBarStyle)
 }
 
 class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
@@ -74,15 +72,7 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
         self.view?.set(module: self.currentModule, direction: .forward, animated: false)
     }
 
-    func setStatusBarStyle(_ statusBarStyle: UIStatusBarStyle) {
-        //self.moduleOutput?.handleOpenedStoriesStatusBarStyleUpdate(statusBarStyle)
-    }
-
-    func onSwipeDismiss() {
-//        if let story = self.stories[safe: self.currentPosition] {
-//            self.analytics.send(.storyClosed(id: story.id, type: .swipe))
-//        }
-    }
+    func onSwipeDismiss() {}
 
     private func getModule(story: StoriesViewModel) -> UIViewController {
         if let module = self.moduleForStoryID[story.id] {
@@ -109,6 +99,7 @@ class OpenedStoriesPresenter: OpenedStoriesPresenterProtocol {
             return
         }
         self.currentPosition = position
+        stories[position].isViewed.value = true
     }
 
     deinit {

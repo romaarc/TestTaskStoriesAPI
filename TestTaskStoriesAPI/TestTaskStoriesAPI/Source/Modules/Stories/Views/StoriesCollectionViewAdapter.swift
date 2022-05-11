@@ -40,7 +40,7 @@ extension StoriesCollectionViewAdapter: UICollectionViewDataSource {
     ) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(cellType: StoryCollectionViewCell.self, for: indexPath)
         let component = components[indexPath.row]
-        cell.update(imagePath: component.cover, title: component.title, isWatched: false)
+        cell.update(imagePath: component.cover, title: component.title, isWatched: component.isViewed.value)
         return cell
     }
     
